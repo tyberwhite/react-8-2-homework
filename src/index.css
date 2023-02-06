@@ -1,13 +1,87 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --darkBlue: #003459;
+  --lightBlue: #00a8e8;
+  --black: #00171f;
+  --yellow: #ffb703;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  width: 100vw;
+  height: 400px;
+  background-color: var(--darkBlue);
+  z-index: -1;
+  border-bottom: 25px solid var(--lightBlue);
+}
+
+header {
+  position: absolute;
+  margin: 30px 100px;
+  color: #fff;
+}
+
+header h1 {
+  font-size: 1.5rem;
+}
+
+.window {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  width: 800px;
+  height: 500px;
+  background-color: #fff;
+  border: 5px solid rgb(183, 181, 181);
+  border-radius: 20px;
+  left: calc(50% - 400px);
+  top: 200px;
+}
+
+.window form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  margin-bottom: 100px;
+}
+
+.window form input {
+  margin: 10px;
+  padding: 5px;
+  height: 30px;
+  width: 400px;
+}
+
+.result {
+  margin: 40px;
+  font-size: 2rem;
+  color: var(--yellow);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: var(--darkBlue);
+  color: #fff;
+  font-size: 0.8rem;
+  height: 40px;
+  width: 100vw;
+  z-index: -1;
 }
